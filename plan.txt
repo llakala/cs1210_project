@@ -1,0 +1,3 @@
+We want to make a typing game!
+Some links to typing games: 
+	TODO
