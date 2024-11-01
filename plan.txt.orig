@@ -1,3 +1,17 @@
+<<<<<<< Updated upstream
+We want to make a typing game!
+Some links to typing games: 
+	https://monkeytype.com/
+<<<<<<< HEAD
+	https://www.typing.com/student/tests
+=======
+	https://www.hackertype.dev/
+	
+Fun idea: 
+	Mode where you have to write a *working* implementation. It doesn't matter what you type,
+	it just has to do what you want.
+>>>>>>> f2b0138f15f19a3145c3564cc37ec7988b4d5c60
+=======
 Cecelia Crounse
 Ella Kramer
 
@@ -10,3 +24,4 @@ In terms of modules, I think tkinter, matplotlib, and the time module will likel
 For testing the program, we can check that the WPM score is accurate, by timing the test ourselves and doing some calculations on what the WPM should look like. We can also do some tests with some realistic data (starting out typing very slowly, then doing a second test at a higher speed) and checking that the graph is accurate.
 
 The graders can likely follow a similar strategy to the one we follow when grading the project. Most of the project comes down to the test functioning, the test results being accurate, and the storage of previous tests also being accurate. 
+>>>>>>> Stashed changes
