@@ -10,24 +10,24 @@ def levenshteinRecursive(str1, str2):
     if len2 == 0:
         return len1
 
-    tail1 = str1[-1]  # Last character of str1
-    tail2 = str2[-1]  # Last character of str2
-    siamese1 = str1[:-1]  # str1 without its last character
-    siamese2 = str2[:-1]  # str2 without its last character
+    head1 = str1[0]  # First character of str1
+    head2 = str2[0]  # First character of str2
+    headless1 = str1[1:]  # str1 without its first character
+    headless2 = str2[1:]  # str2 without its first character
 
-    if tail1 == tail2:
-        return levenshteinRecursive(siamese1, siamese2)
+    if head1 == head2:
+        return levenshteinRecursive(headless1, headless2)
 
-    insert = levenshteinRecursive(str1, siamese2)
-    remove = levenshteinRecursive(siamese1, str2)
-    replace = levenshteinRecursive(siamese1, siamese2)
+    insert = levenshteinRecursive(str1, headless2)
+    remove = levenshteinRecursive(headless1, str2)
+    replace = levenshteinRecursive(headless1, headless2)
     return 1 + min(insert, remove, replace)
 
 # Drivers code
 
 
-str1 = "hello"
-str2 = "bello"
+str1 = "My name is jeepers creepers. I am freaking awesome. However, I lost my knife. I am now sad :((((. Uh oh!"
+str2 = "My name is jeepers creepers. I am freaking awesome. However, I lost my kife. I am now sad :((((. Uh oh!"
 
-distance = levenshteinRecursive(str1, str2)
+distance = levenshteinRecursive("I love chocolate.", "Chocolate is the best.")
 print("Levenshtein Distance:", distance)
