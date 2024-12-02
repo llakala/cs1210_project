@@ -40,7 +40,8 @@ def play(PROMPT):
 
 if __name__ == "__main__":
     while True:
-        uchoice = input("Welcome to Typing Test. Type `p` to test with a phrase,"
+        uchoice = input("Welcome to Typing Test. "
+                        "Type `p` to test with a phrase, "
                         "`c` to test with code, and `e` to End: ")
 
         if uchoice == "p":
@@ -56,5 +57,6 @@ if __name__ == "__main__":
             break
 
         else:
-            uchoice = input("That is not a correct input. Type `p` to test with a phrase,"
+            uchoice = input("That is not a correct input. "
+                            "Type `p` to test with a phrase, "
                             "`c` to test with code, and `e` to End: ")
