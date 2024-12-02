@@ -32,6 +32,7 @@ def play(PROMPT):
 
     errors = wagner_fischer.distance(attempt, PROMPT)
     percentage_wrong = 100 * (errors / len(PROMPT))
+
     print(f"It took you {difference:.2f} seconds")
     print(f"You made {errors} errors.")
     print(f"Your accuracy was {100 - percentage_wrong:.2f}%")
@@ -43,10 +44,12 @@ if __name__ == "__main__":
                         "`c` to test with code, and `e` to End: ")
 
         if uchoice == "p":
-            play(random.choice(TEXT_PHRASES))
+            choice = random.choice(TEXT_PHRASES)
+            play(choice)
 
         elif uchoice == "c":
-            play(random.choice(TEXT_CODE))
+            choice = random.choice(TEXT_CODE)
+            play(choice)
 
         elif uchoice == "e":
             print("Thank you for playing.")
