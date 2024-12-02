@@ -8,7 +8,7 @@ import time
 import wagner_fischer
 import random
 
-TEST_PHRASE = [
+TEXT_PHRASES = [
                 "The quick brown fox jumps over the lazy dog.",
                 "Don’t put all your eggs in one basket.",
                 "One small step for man, one giant leap for mankind - Neil Armstrong 1969",
@@ -16,25 +16,25 @@ TEST_PHRASE = [
                 "I scream, you scream, we all scream for icecream",
                 "...and a partridge in a pear tree."
             ]
-TEST_CODING = [
+TEXT_CODE = [
                 'if __name__ == "__main__":',
                 "public static void main (String[] args) {",
                 'print("Hello, World!")'
             ]
 
 
-def play(TEST):
+def play(PROMPT):
     start = time.time()
 
-    user = input(f"Start Typing: {TEST} \n")
+    attempt = input(f"Start Typing: {PROMPT} \n")
 
     end = time.time()
     difference = end - start
 
-    errors = wagner_fischer.distance(user, TEST)
+    errors = wagner_fischer.distance(attempt, PROMPT)
     print(f"It took you {difference:.2f} seconds")
     print(f"You made {errors} errors.")
-    print(f"Your accuracy was {100 - (errors/len(TEST)):.2%}")
+    print(f"Your accuracy was {100 - (errors/len(PROMPT)):.2%}")
 
 
 if __name__ == "__main__":
@@ -43,10 +43,10 @@ if __name__ == "__main__":
                         "`c` to test with code, and `e` to End: ")
 
         if uchoice == "p":
-            play(random.choice(TEST_PHRASE))
+            play(random.choice(TEXT_PHRASES))
 
         elif uchoice == "c":
-            play(random.choice(TEST_CODING))
+            play(random.choice(TEXT_CODE))
 
         elif uchoice == "e":
             print("Thank you for playing.")
