@@ -27,22 +27,17 @@ def distance(str1, str2):
 
     for col in range(1, cols):
         for row in range(1, rows):
-            above = matrix[row - 1][col]
-            left = matrix[row][col - 1]
-            corner = matrix[row - 1][col - 1]
+            corner = matrix[row - 1][col - 1]  # Price to substitute
+            above = matrix[row - 1][col]  # Price to add
+            left = matrix[row][col - 1]  # Price to delete
 
             current1 = str1[col - 1]
             current2 = str2[row - 1]
-            if current1 == current2:  # If the compared character is the same
-                matrix[row][col] = min(above, left, corner)
 
-            elif above == left:  # Substitution
-                matrix[row][col] = 1 + corner
+            # If the new character is the same, the price to substitute is zero
+            if current1 == current2:
+                corner -= 1
 
-            else:  # Deletion or insertion
-                matrix[row][col] = 1 + min(above, left, corner)
-
-    # for row in matrix:
-    #     print(row)
+            matrix[row][col] = 1 + min(above, left, corner)
 
     return matrix[-1][-1]
