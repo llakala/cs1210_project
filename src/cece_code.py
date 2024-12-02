@@ -25,16 +25,16 @@ TEXT_CODE = [
 
 def play(PROMPT):
     start = time.time()
-
     attempt = input(f"Start Typing: {PROMPT} \n")
-
     end = time.time()
+
     difference = end - start
 
     errors = wagner_fischer.distance(attempt, PROMPT)
+    percentage_wrong = 100 * (errors / len(PROMPT))
     print(f"It took you {difference:.2f} seconds")
     print(f"You made {errors} errors.")
-    print(f"Your accuracy was {100 - (errors/len(PROMPT)):.2%}")
+    print(f"Your accuracy was {100 - percentage_wrong:.2f}%")
 
 
 if __name__ == "__main__":
