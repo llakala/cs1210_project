@@ -1,4 +1,5 @@
 import time
+import wagner_fischer
 
 TEST = 'The quick brown fox jumps over the lazy dog.'
 
@@ -9,10 +10,6 @@ difference = end - start
 
 print(f"It took you {difference:.2f} seconds")
 
-errors = abs(len(TEST) - len(user))
-
-for i, l in enumerate(TEST):
-    if user[i] != l:
-        errors += 1
+errors = wagner_fischer.distance(user, TEST)
 
 print(f"You made {errors} errors.")

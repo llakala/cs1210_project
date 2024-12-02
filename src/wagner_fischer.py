@@ -11,6 +11,7 @@ def empty2d(columns, rows):
 
 
 def distance(str1, str2):
+    # Add one for a blank row at the left and top
     cols = len(str1) + 1
     rows = len(str2) + 1
 
@@ -45,9 +46,3 @@ def distance(str1, str2):
     #     print(row)
 
     return matrix[-1][-1]
-
-
-str1 = ""
-str2 = ""
-output = distance(str1, str2)
-print(output)

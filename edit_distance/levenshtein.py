@@ -26,8 +26,8 @@ def levenshteinRecursive(str1, str2):
 # Drivers code
 
 
-str1 = "Ho"
-str2 = "Ho"
+str1 = "Hi there bobby johnson, you are awesome."
+str2 = "Hi there bobby johnson, you are great. I miss"
 
-distance = levenshteinRecursive("I love chocolate.", "Chocolate is the best.")
+distance = levenshteinRecursive(str1, str2)
 print("Levenshtein Distance:", distance)
