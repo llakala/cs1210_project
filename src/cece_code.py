@@ -29,6 +29,7 @@ TEXT_CODE = [
                 'print(f"Your lucky number is {random.random():.2f}!")'
             ]
 
+
 def play(PROMPT):
     start = time.time()
     attempt = input(f"Start Typing: \n{PROMPT}\n")
@@ -52,7 +53,7 @@ def play(PROMPT):
     print(f"This gives you a WPM of {wpm:.2f}")
     print()
     print(f"Your accuracy was {accuracy * 100:.2f}%")
-    print(f"Accounting for errors, your true WPM was {(wpm * accuracy).2f}")
+    print(f"Accounting for errors, your true WPM was {(wpm * accuracy):.2f}")
 
 
 if __name__ == "__main__":
