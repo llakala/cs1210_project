@@ -10,8 +10,10 @@ Project Description:
 
 Instructions for running: 
 Try your best to write the given phrase quickly and accurately. 
-    Test code:
-        
+Ensure that the WPM is higher when typing quickly, and lower when typing slowly.
+Check that the accuracy is lower when making mistakes.
+Validate that the input code for selecting which type of prompt to use works as intended.
+
 Division of labor:
     Cece: Read me file, main starter file, test code creations, planner
     Ellie: wagner fisher file, researcher, debugger
