@@ -53,12 +53,13 @@ def play(PROMPT):
 
 if __name__ == "__main__":
     while True:
-        uchoice = input("Welcome to Typing Test. Type 'A' to test with a phrase,"
-                    "'B' to test with code, and 'X' to End: ")
+        uchoice = input("Welcome to Typing Test.",
+                        "Type 'A' to test with a phrase,"
+                        "'B' to test with code, and 'X' to End: ")
         if uchoice == 'A':
-            play(random.choice(TESTPHRASE))
+            play(random.choice(TEXT_PHRASES))
         elif uchoice == 'B':
-            play(random.choice(TESTCODING))
+            play(random.choice(TEXT_CODE))
         elif uchoice == 'X':
             print("Thank you for playing.")
             break
