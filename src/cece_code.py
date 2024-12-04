@@ -22,7 +22,10 @@ TEXT_PHRASES = [
 TEXT_CODE = [
                 'if __name__ == "__main__":',
                 "public static void main (String[] args) {",
-                'print("Hello, World!")'
+                'print("Hello, World!")',
+                'environment.systemPackages = with pkgs;',
+                "avg = sum(lst) / len(lst)",
+                'print(f"Your lucky number is {random.random():.2f}!")'
             ]
 
 
