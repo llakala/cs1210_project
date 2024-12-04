@@ -13,8 +13,11 @@ TEXT_PHRASES = [
                 "Don’t put all your eggs in one basket.",
                 "One small step for man, one giant leap for mankind - Neil Armstrong 1969",
                 "Tongue Twister: She sells sea shells by the sea shore",
-                "I scream, you scream, we all scream for icecream",
+                "I scream, you scream, we all scream for ice cream",
                 "...and a partridge in a pear tree."
+                "I before e, except after c, or when sounding like A"
+                "Shall I compare thee to a summer's day?"
+                "To be or not to be, that is the question."
             ]
 TEXT_CODE = [
                 'if __name__ == "__main__":',
