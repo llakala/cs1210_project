@@ -31,11 +31,24 @@ def play(PROMPT):
     difference = end - start
 
     errors = wagner_fischer.distance(attempt, PROMPT)
-    percentage_wrong = 100 * (errors / len(PROMPT))
+    if errors > len(PROMPT):
+        errors = len(PROMPT)
 
-    print(f"It took you {difference:.2f} seconds")
+    inaccuracy = errors / len(PROMPT)
+    accuracy = 1 - inaccuracy
+
+    words = len(attempt.split(" "))
+    per_minute = 60 / difference
+
+    wpm = words * per_minute
+
+    print(f"You typed {words} words in {difference:.2f} seconds.")
+    print(f"This gives you a WPM of {wpm:.2f}")
+    print()
     print(f"You made {errors} errors.")
-    print(f"Your accuracy was {100 - percentage_wrong:.2f}%")
+    print(f"Your accuracy was {accuracy * 100:.2f}%")
+    print()
+    print(f"Accounting for errors, your WPM was {wpm * accuracy}")
 
 
 if __name__ == "__main__":
