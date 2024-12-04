@@ -25,7 +25,7 @@ TEXT_CODE = [
 
 def play(PROMPT):
     start = time.time()
-    attempt = input(f"Start Typing: {PROMPT} \n")
+    attempt = input(f"Start Typing: \n{PROMPT}\n")
     end = time.time()
 
     difference = end - start
